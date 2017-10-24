@@ -52,7 +52,7 @@ public class AmazonHomePage extends SetUp{
 	
 
 	public WebElement searchButton() {
-		//new WebDriverWait(driver, 30).until(ExpectedConditions.presenceOfElementLocated(By.xpath("//android.widget.Button[@index='0']")));
+		
 		waitForElement(By.xpath("//android.widget.Button[@index='0']"));
 		return driver.findElement(By.xpath("//android.widget.Button[@index='0']"));
 	}
