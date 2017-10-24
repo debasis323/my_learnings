@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="jar_files/java-client-5.0.0-BETA8.jar"/>
+	<classpathentry kind="lib" path="jar_files/selenium-server-standalone-3.3.1.jar"/>
+	<classpathentry kind="lib" path="jar_files/testng-6.11.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

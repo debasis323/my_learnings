@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="1" ignored="0" total="4" passed="3">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="66157" started-at="2017-10-19T15:55:50Z" finished-at="2017-10-19T15:56:57Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="66157" started-at="2017-10-19T15:55:50Z" finished-at="2017-10-19T15:56:57Z">
+      <class name="test.AmazonTests">
+        <test-method status="PASS" signature="setUpAmazon()[pri:0, instance:test.AmazonTests@643b1d11]" name="setUpAmazon" is-config="true" duration-ms="26629" started-at="2017-10-19T16:55:50Z" finished-at="2017-10-19T16:56:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpAmazon -->
+        <test-method status="PASS" signature="atTest()[pri:0, instance:test.AmazonTests@643b1d11]" name="atTest" duration-ms="1008" started-at="2017-10-19T16:56:17Z" finished-at="2017-10-19T16:56:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- atTest -->
+        <test-method status="FAIL" signature="checkAmazonLogoShown()[pri:0, instance:test.AmazonTests@643b1d11]" name="checkAmazonLogoShown" duration-ms="35920" started-at="2017-10-19T16:56:18Z" finished-at="2017-10-19T16:56:54Z">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for visibility of element located by By.xpath: //android.widget.Button[contains(@content-desc,'Delete')]" (tried for 10 second(s) with 500 MILLISECONDS interval)]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //android.widget.Button[contains(@content-desc,'Delete')]" (tried for 10 second(s) with 500 MILLISECONDS interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:232)
+	at pages.AmazonHomePage.waitForElement(AmazonHomePage.java:44)
+	at pages.AmazonHomePage.deleteFirstItemFromCart(AmazonHomePage.java:77)
+	at pages.AmazonHomePage.printTest(AmazonHomePage.java:101)
+	at test.AmazonTests.checkAmazonLogoShown(AmazonTests.java:38)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
+	at org.testng.TestNG.runSuites(TestNG.java:1144)
+	at org.testng.TestNG.run(TestNG.java:1115)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:230)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)
+Caused by: org.openqa.selenium.InvalidSelectorException: invalid selector: Unable to locate an element with the xpath expression //android.widget.Button[contains(@content-desc,'Delete')]" because of the following error:
+SyntaxError: Failed to execute 'evaluate' on 'Document': The string '//android.widget.Button[contains(@content-desc,'Delete')]"' is not a valid XPath expression.
+  (Session info: chrome=59.0.3071.125)
+  (Driver info: chromedriver=2.30.477690 (c53f4ad87510ee97b5c3425a14c0e79780cdf262),platform=Mac OS X 10.12.6 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 119 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/invalid_selector_exception.html
+Build info: version: '3.3.1', revision: '5234b32', time: '2017-03-10 09:04:52 -0800'
+System info: host: 'mc-s103883.local', ip: '10.10.3.195', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.12.6', java.version: '1.8.0_121'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities [{appPackage=com.android.chrome, deviceScreenSize=1440x2560, networkConnectionEnabled=true, warnings={}, databaseEnabled=false, deviceName=1115fb5a83082301, platform=LINUX, deviceUDID=1115fb5a83082301, appActivity=com.android.browser.BrowserActivity, desired={appPackage=com.android.chrome, appActivity=com.android.browser.BrowserActivity, appium-version=1.6.3, VERSION=6.0.1, browserName=Chrome, platformName=Android, deviceName=Galaxy S5}, appium-version=1.6.3, platformVersion=6.0.1, webStorageEnabled=false, locationContextEnabled=false, VERSION=6.0.1, takesScreenshot=true, browserName=Chrome, javascriptEnabled=true, deviceModel=SM-G920F, platformName=Android, deviceManufacturer=samsung}]
+Session ID: 0019d15c-8bf4-4a9d-8d76-84d1d65d30ec
+*** Element info: {Using=xpath, value=//android.widget.Button[contains(@content-desc,'Delete')]"}
+	at sun.reflect.GeneratedConstructorAccessor11.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:638)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:42)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:396)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElements(DefaultGenericMobileDriver.java:54)
+	at io.appium.java_client.AppiumDriver.findElements(AppiumDriver.java:168)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementsByXPath(RemoteWebDriver.java:480)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElementsByXPath(DefaultGenericMobileDriver.java:144)
+	at io.appium.java_client.AppiumDriver.findElementsByXPath(AppiumDriver.java:200)
+	at org.openqa.selenium.By$ByXPath.findElements(By.java:356)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:359)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElements(DefaultGenericMobileDriver.java:50)
+	at io.appium.java_client.AppiumDriver.findElements(AppiumDriver.java:164)
+	at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:898)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:44)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:208)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:204)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:209)
+	... 29 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkAmazonLogoShown -->
+        <test-method status="PASS" signature="checkItemAddedSuccessfully()[pri:0, instance:test.AmazonTests@643b1d11]" name="checkItemAddedSuccessfully" duration-ms="1" started-at="2017-10-19T16:56:54Z" finished-at="2017-10-19T16:56:54Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkItemAddedSuccessfully -->
+        <test-method status="PASS" signature="itemDeletedFromBasket()[pri:0, instance:test.AmazonTests@643b1d11]" name="itemDeletedFromBasket" duration-ms="1" started-at="2017-10-19T16:56:54Z" finished-at="2017-10-19T16:56:54Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- itemDeletedFromBasket -->
+        <test-method status="PASS" signature="closeConnections()[pri:0, instance:test.AmazonTests@643b1d11]" name="closeConnections" is-config="true" duration-ms="2577" started-at="2017-10-19T16:56:54Z" finished-at="2017-10-19T16:56:57Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeConnections -->
+      </class> <!-- test.AmazonTests -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
